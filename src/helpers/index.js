@@ -1,0 +1,1 @@
+export { highlightedStr } from './parse.js';

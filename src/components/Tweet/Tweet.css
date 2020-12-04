@@ -1,0 +1,49 @@
+.tweet{
+    display: flex;
+    align-items:top;
+    background-color: white;
+    border: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: whitesmoke;
+    padding: 0.9375em;
+    /*width:100%;*/
+}
+
+.avatar img{
+    width: 4.375em;
+    height: 4.375em;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.625em;
+}
+
+.data{
+    display: block;
+    padding-left: 0.9375em;
+    width: 100%;
+}
+
+.gray{
+    color: gray;
+}
+
+.date{
+    font-style: italic;
+    padding-left: 0.3125em;
+}
+
+.username{
+    padding-left: 0.3125em;
+    padding-right: 0.3125em;
+}
+
+.highlight{
+    color: blue;
+    text-decoration: none;
+}
+
+.trash{
+    cursor: pointer;
+    float: right;
+    padding-right: 0.3125em;
+}

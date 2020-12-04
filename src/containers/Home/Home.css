@@ -1,0 +1,32 @@
+.tweets {
+    width: 100%;
+    min-width: 25em;
+    box-shadow: 1px 1px 12px #555;
+}
+
+.homepage{
+    width: 30%;
+}
+
+@media screen and (max-width: 400px) {
+    .tweets {
+        min-width: 20em;
+    }
+
+    .homepage{
+        width: 100%;
+        margin: 1%
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .tweets {
+        min-width: 20em;
+    }
+
+    .homepage{
+        width: 90%;
+        margin: 1%
+    }
+}

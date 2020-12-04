@@ -1,0 +1,11 @@
+.main{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding-top: 3.125em;
+    padding-bottom: 3.125em;
+    min-height: 61.25em;
+}
+

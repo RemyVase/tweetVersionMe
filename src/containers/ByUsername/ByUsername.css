@@ -1,0 +1,11 @@
+.tweets {
+    width: 100%;
+    min-width: 25em;
+    box-shadow: 1px 1px 12px #555;
+}
+
+@media screen and (max-width: 400px) {
+    .tweets {
+        min-width: 20em;
+    }
+}
