@@ -9,8 +9,26 @@ import './Home.css';
 
 class Home extends Component{
 
-    state= {
-        tweets,
+    constructor(props){
+        super(props);
+        this.state = { 
+            users: "",
+            tweets,
+        }
+
+
+    }
+
+    componentDidMount(){
+        fetch('http://127.0.0.1:3333/api/users')
+            .then(res => res.json())
+            .then((data) => {
+                console.log(data);
+                //this.setState({ users: data })
+            })
+            .catch(console.log);
+
+        //console.log(this.state.users);
     }
 
     publish = tweet => {

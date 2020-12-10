@@ -1,33 +1,27 @@
+const bodyParser = require('body-parser');
 const express = require('express');
-var mysql      = require('mysql');
+const usersRouter = require('./routes/users');
 
-var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    database : 'tweetly'
-});
-
-connection.connect(function(err) {
+/*
+db.connect(function(err) {
     if (err) {
       console.error('error connecting: ' + err.stack);
       return;
     }
-    console.log('connected as id ' + connection.threadId);
-});
-
-const getAllUsers = connection.query('CALL getAllUsers', (error, results, fields) => {
-    if(error){
-        return console.error(error.message);
-    }
-    console.log(results[0]);
-})
-
+    console.log('connected as id ' + db.threadId);
+});*/
 
 const app = express();
 
-app.use((req, res) => {
-    res.json({ message : 'Votre requête a bien été recue'});
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    next();
 });
+
+app.use(bodyParser.json());
+
+app.use('/api/users', usersRouter);
 
 module.exports = app;
