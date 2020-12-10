@@ -1,0 +1,8 @@
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255) !important;
+}
+
+.navbar-light .navbar-brand {
+    color: rgba(255, 255, 255) !important;
+    font-family: Chalkduster, fantasy;
+}

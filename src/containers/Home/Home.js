@@ -15,8 +15,6 @@ class Home extends Component{
             users: "",
             tweets,
         }
-
-
     }
 
     componentDidMount(){
